@@ -1,0 +1,1 @@
+python -m esptool --chip esp32s3 -b 460800 --before default-reset --after hard-reset  --port COM10 write-flash --flash-mode dout --flash-size detect --flash-freq 80m 0x0 "bootloader/bootloader.bin" 0x10000 "MicroOS_2_1_0.bin" 0x8000 "partition_table/partition-table.bin" 0xd000 "ota_data_initial.bin"
